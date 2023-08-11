@@ -9,6 +9,7 @@
   background-color: $theme-color;
   width: $container-width;
   margin: 0 auto;
+  transition: 0.5s all ease;
 
   .logo {
     font-size: 2rem;
@@ -16,19 +17,33 @@
   }
 
   .nav-btn {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
     display: none;
     background-color: none;
     border: none;
     cursor: pointer;
-    padding: 2rem;
+    padding: 1rem;
+    background-color: $theme-color;
 
     .bar {
       display: block;
-      width: 2.5rem;
-      height: 0.5rem;
+      width: 2rem;
+      height: 0.2rem;
       background-color: $primary-color;
       margin: 0.5rem auto;
-      transition: transform 0.3s ease, opacity 0.3s ease;
+      transition: 0.3s ease, opacity 0.3s ease;
+
+      &.cross1 {
+        transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
+      }
+      &.cross2 {
+        opacity: 0;
+      }
+      &.cross3 {
+        transform: rotate(45deg) translate(-0.5rem, -0.5rem);
+      }
     }
   }
 
@@ -39,6 +54,7 @@
 
     &.open {
       display: block;
+      animation: slideIn 0.5s forwards;
     }
 
     li {
@@ -62,6 +78,9 @@
     align-items: flex-start;
 
     .nav-btn {
+      position: absolute;
+      top: 1rem;
+      right: 3rem;
       display: block;
     }
 
@@ -87,16 +106,27 @@
       }
 
       .nav-btn {
-        .bar:nth-child(1) {
-          transform: translateY(1.2rem) rotate(45deg);
+        &.cross1 {
+          transform: rotate(-45deg) translate(-0.5rem, 0.5rem);
         }
-        .bar:nth-child(2) {
+        &.cross2 {
           opacity: 0;
         }
-        .bar:nth-child(3) {
-          transform: translateY(-1.2rem) rotate(-45deg);
+        &.cross3 {
+          transform: rotate(45deg) translate(-0.5rem, -0.5rem);
         }
       }
     }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

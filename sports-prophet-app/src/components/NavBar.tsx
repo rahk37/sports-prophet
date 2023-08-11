@@ -1,24 +1,27 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../styles/components/NavBar.scss";
 
 function NavBar() {
-    const [isNavOpen, setOpenNav] = useState(false);
+  const [isNavOpen, setOpenNav] = useState(false);
 
-    const openNav = () => {
-        setOpenNav(!isNavOpen);
-    };
+  const openNav = () => {
+    setOpenNav(!isNavOpen);
+  };
 
   return (
-    <nav className={`navbar ${isNavOpen ? 'open' : ''}`}>
+    <nav className={`navbar ${isNavOpen ? "open" : ""}`}>
       <div className="logo">SportsProphet</div>
 
-      <button className="nav-btn" onClick={openNav}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+      <button
+        className={`nav-btn ${isNavOpen ? "open" : "closed"}`}
+        onClick={openNav}
+      >
+        <span className={`bar bar1 ${isNavOpen ? "cross1" : ""}`}></span>
+        <span className={`bar bar2 ${isNavOpen ? "cross2" : ""}`}></span>
+        <span className={`bar bar3 ${isNavOpen ? "cross3" : ""}`}></span>
       </button>
 
-      <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
+      <ul className={`nav-links ${isNavOpen ? "open" : ""}`}>
         <li>
           <a href="/">Home</a>
         </li>

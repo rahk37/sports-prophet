@@ -1,0 +1,102 @@
+@import "../global.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $primary-color;
+  padding: 2rem 0;
+  background-color: $theme-color;
+  width: $container-width;
+  margin: 0 auto;
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .nav-btn {
+    display: none;
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    padding: 2rem;
+
+    .bar {
+      display: block;
+      width: 2.5rem;
+      height: 0.5rem;
+      background-color: $primary-color;
+      margin: 0.5rem auto;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    &.open {
+      display: block;
+    }
+
+    li {
+      margin-right: 3.6rem;
+
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 75em) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .nav-btn {
+      display: block;
+    }
+
+    .nav-links {
+      display: none;
+      margin-top: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    li {
+      margin-right: 0;
+      margin-bottom: 1rem;
+
+      a {
+        font-size: 1.4rem;
+      }
+    }
+
+    .navbar.open {
+      .nav-links {
+        display: block;
+      }
+
+      .nav-btn {
+        .bar:nth-child(1) {
+          transform: translateY(1.2rem) rotate(45deg);
+        }
+        .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .bar:nth-child(3) {
+          transform: translateY(-1.2rem) rotate(-45deg);
+        }
+      }
+    }
+  }
+}

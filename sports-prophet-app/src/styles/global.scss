@@ -1,21 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-$background-color: #2c1320;
-$background-light1-color: #412b36;
-$background-light2-color: #56424d;
-$background-dark1-color: #28111d;
-$background-dark2-color: #230f1a;
-
-$accent1-color: #ff4365;
-$accent2-color: #00d9c0;
-
-$font-color: #f5d0c5;
-$font-light1-color: #f6d5cb;
-$font-light2-color: #f7d9d1;
-$font-dark1-color: #ddbbb1;
-$font-dark2-color: #c4a69e;
+$primary-color: #fff;
+$theme-color: #CE2D4F;
+$font-color: #23272A;
 
 $font-style: "Montserrat", sans-serif;
+
+$container-width: 120rem;
 
 body {
   margin: 0;
@@ -26,7 +17,7 @@ body {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background-color: $background-color;
+  background-color: $primary-color;
   color: $font-color;
 }
 

@@ -8,18 +8,13 @@ function NavBar() {
     setOpenNav(!isNavOpen);
   };
 
+  const userLogin = () => {
+    console.log("not implemented yet");
+  };
+
   return (
     <nav className={`navbar ${isNavOpen ? "open" : ""}`}>
       <div className="logo">SportsProphet</div>
-
-      <button
-        className={`nav-btn ${isNavOpen ? "open" : "closed"}`}
-        onClick={openNav}
-      >
-        <span className={`bar bar1 ${isNavOpen ? "cross1" : ""}`}></span>
-        <span className={`bar bar2 ${isNavOpen ? "cross2" : ""}`}></span>
-        <span className={`bar bar3 ${isNavOpen ? "cross3" : ""}`}></span>
-      </button>
 
       <ul className={`nav-links ${isNavOpen ? "open" : ""}`}>
         <li>
@@ -38,6 +33,19 @@ function NavBar() {
           <a href="/ufc">UFC</a>
         </li>
       </ul>
+
+      <button className="login-btn" onClick={userLogin}>
+        Login
+      </button>
+
+      <button
+        className={`nav-btn ${isNavOpen ? "open" : "closed"}`}
+        onClick={openNav}
+      >
+        <span className={`bar bar1 ${isNavOpen ? "cross1" : ""}`}></span>
+        <span className={`bar bar2 ${isNavOpen ? "cross2" : ""}`}></span>
+        <span className={`bar bar3 ${isNavOpen ? "cross3" : ""}`}></span>
+      </button>
     </nav>
   );
 }

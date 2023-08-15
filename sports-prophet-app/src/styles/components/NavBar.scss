@@ -2,12 +2,14 @@
 
 .navbar {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   color: $primary-color;
   padding: 2rem 0;
   background-color: $theme-color;
   width: $container--width;
+  z-index: 999;
   margin: 0 auto;
   transition: 0.5s all ease;
 

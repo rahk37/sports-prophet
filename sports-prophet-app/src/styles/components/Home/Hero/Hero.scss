@@ -1,0 +1,10 @@
+@import "../../../global.scss";
+
+.hero {
+  position: relative;
+  background-color: $theme-color;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+

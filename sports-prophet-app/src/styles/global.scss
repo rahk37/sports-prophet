@@ -2,7 +2,7 @@
 
 $primary-color: #fff;
 $theme-color: #CE2D4F;
-$font-color: #23272A;
+$font-color: #343434;
 
 $font-style: "Montserrat", sans-serif;
 
@@ -24,4 +24,19 @@ html {
 
 body {
   font-family: $font-style;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 3rem;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 1.8rem 3.6rem;
+  border: none;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    box-shadow: $cta--box-shadow;
+  }
 }

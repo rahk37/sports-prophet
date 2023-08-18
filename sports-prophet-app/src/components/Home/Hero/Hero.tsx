@@ -4,7 +4,6 @@ import "../../../styles/components/Home/Hero/Hero.scss";
 function Hero() {
   return (
     <div className="hero">
-
       <div className="mountain">
         <div className="mountain-top">
           <div className="mountain-cap-1"></div>
@@ -52,12 +51,12 @@ function Hero() {
       <div className="cloud2"></div>
 
       <div className="hero-content">
-        <h1 className="hero-header">Imagine a Magic Crystal...</h1>
+        <h1 className="hero-header">Imagine Elevated Intel...</h1>
         <p className="hero-p">
-          ...that predicts professional sports outcomes with remarkable
-          precision. Witness predictions materialize with a simple tap. What's
-          so enchanting? It's absolutely free, making predicting game outcomes a
-          breeze.
+          ...that provides you with professional sports outcome predictions with
+          remarkable precision. Witness predictions materialize with a simple
+          tap. What's so enchanting? It's absolutely free, making predicting
+          game outcomes a breeze.
         </p>
         <div className="hero-btns">
           <button className="btn btn-hero-secondary">Get Started</button>

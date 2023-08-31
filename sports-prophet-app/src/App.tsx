@@ -1,12 +1,13 @@
 import React from "react";
-import NavBar from "./components/NavBar";
-import Hero from "./components/Home/Hero/Hero";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Hero />
+      <Routes>
+        <Route path="/" Component={Home} />
+      </Routes>
     </>
   );
 }

@@ -1,4 +1,4 @@
-@import "../../../global.scss";
+@import "../global.scss";
 
 $mountain: #671728;
 $mountain-cap: #d85772;
@@ -7,9 +7,16 @@ $cloud: #f0c0ca;
 .hero {
   position: relative;
   background-color: $theme-color;
-  padding: 10rem 0;
   overflow: hidden;
   z-index: 1;
+}
+
+.home-padding {
+  padding: 10rem 0;
+}
+
+.feature-padding {
+  padding: 5rem 0;
 }
 
 .mountain,
